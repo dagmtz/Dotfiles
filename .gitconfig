@@ -1,0 +1,7 @@
+[user]
+	name = dagmtz
+	email = dagmtzs@gmail.com
+[core]
+	editor = vim
+[credential]
+	helper = cache

@@ -1,63 +1,66 @@
 !! Colorscheme
-
 ! special
-*.foreground: #93a1a1
-*.background: #141c21
-*.cursorColor: #afbfbf
+*.foreground:   #a2a2a2
+*.background:   #282828
+*.cursorColor:  #a2a2a2
 
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0:       #555555
+*.color8:       #888888
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1:       #9c3528
+*.color9:       #d64937
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2:       #61bc3b
+*.color10:      #86df5d
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3:       #f3b43a
+*.color11:      #fdd75a
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4:       #0d68a8
+*.color12:      #0f75bd
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5:       #744560
+*.color13:      #9e5e83
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6:       #288e9c
+*.color14:      #37c3d6
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7:       #a2a2a2
+*.color15:      #f9f9f9
 
-!! URxvt Appearance
-!URxvt*font: xft:IosevkaTerm Nerd Font Mono:size=11,xft:Consolas:size=9,xft:DejaVu Sans:size=6,xft:FontAwesome:size=6
-!URxvt.font: xft:IosevkaTermNerdFontMono\\-Regula.ttf:size=10:hinting=true
-URxvt.font: xft:IosevkaTerm Nerd Font Mono:size=11:hinting=true
-URxvt.boldFont: xft:IosevkaTerm Nerd Font Mono:style=Bold:size=11
-URxvt.italicFont: xft:IosevkaTerm Nerd Font Mono:style=Italic:size=11
-URxvt.boldItalicfont: xft:IosevkaTerm Nerd Font Mono:style=Bold Italic:size=11
-URxvt.tabbed.tabbar-fg: 2
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 3
-URxvt.tabbed.tab-bg: 0
-URxvt.lineSpace: 0
-URxvt.geometry: 180x60
-URxvt.internalBorder: 24
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
-URxvt.saveline: 2048
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 24
-URxvt.iso14755: false
+URxvt*font: xft:IosevkaTerm Nerd Font Mono:size=11:hinting=true
+URxvt*boldFont: xft:IosevkaTerm Nerd Font Mono:style=Bold:size=11
+URxvt*italicFont: xft:IosevkaTerm Nerd Font Mono:style=Italic:size=11
+URxvt*boldItalicfont: xft:IosevkaTerm Nerd Font Mono:style=Bold Italic:size=11
 
-URxvt.perl-ext-common: tabbed
+URxvt*tabbed.tabbar-fg: 6
+URxvt*tabbed.tabbar-bg: 0 
+URxvt*tabbed.tab-fg: 15
+URxvt*tabbed.tab-bg: 0
+
+URxvt*lineSpace: 0
+URxvt*geometry: 180x40
+URxvt*internalBorder: 24
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+URxvt*saveline: 2048
+URxvt*scrollBar: false
+URxvt*scrollstyle: plain
+URxvt*scrollBar_right: false
+URxvt*urgentOnBell: false 
+URxvt*visualBell: true
+URxvt*iso14755: false
+URxvt*depth: 32
+URxvt.background: [95]#202020
+
+URxvt.perl-ext-common: tabbed, close-gracefully
+
+
