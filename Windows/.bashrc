@@ -42,9 +42,10 @@ shopt -s cmdhist
 # History substitution are not immediately passed to the shell parser.
 shopt -s histappend histverify
 
-#bind 'set completion-ignore-case on'
-#bind 'set show-all-if-ambiguous on'
+# cd ~
+
+bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
-cd ~
-#export PS1="\[\033[1;32m\]\u \[\033[0;33m\]\w\[\033[36m\]`__git_ps1`\n\[\033[1;32m\]$>\[\033[0m\] "
+eval "$(oh-my-posh init bash --config /d/Config/Windows/PowerShell/dagmtz.omp.json)"
