@@ -142,7 +142,7 @@
                         "discharging_icon": "\uead0 "
                     },
                     "style": "powerline",
-                    "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
+                    "template": " {{ if not .Error }}{{ .Icon }} {{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
                     "type": "battery"
                 },
                 {
