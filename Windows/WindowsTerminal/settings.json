@@ -1,0 +1,178 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "initialCols": 150,
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "Ottosson",
+            "experimental.retroTerminalEffect": false,
+            "font": 
+            {
+                "face": "Iosevka Nerd Font",
+                "size": 10,
+                "weight": "normal"
+            },
+            "intenseTextStyle": "all",
+            "opacity": 95
+        },
+        "list": 
+        [
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            // git bash
+            {
+                "commandline": "%PROGRAMFILES%\\Git\\bin\\bash.exe -i -l",
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "source": "Git",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // ucrt64 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -ucrt64 -shell zsh",
+                "guid": "{fbc6c24b-086d-41a7-b82e-3f007c4689fa}",
+                "hidden": false,
+                "icon": "C:\\Data\\_DevTools\\msys64\\ucrt64.ico",
+                "name": "MSYS2: ucrt64",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // Command Prompt
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            // Windows PowerShell
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            // msys2
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -msys2 -shell bash",
+                "guid": "{7da50133-3e36-47da-b1ac-f0164da5e69b}",
+                "hidden": true,
+                "icon": "C:\\Data\\_DevTools\\msys64\\msys2.ico",
+                "name": "MSYS2: msys2",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // mingw32 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -mingw32 -shell bash",
+                "guid": "{66d997cf-71fd-4868-84b8-ac0740ef2848}",
+                "hidden": false,
+                "icon": "C:\\Data\\_DevTools\\msys64\\mingw32.ico",
+                "name": "MSYS2: mingw32",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // mingw64 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -mingw64 -shell bash",
+                "guid": "{f690fc83-2b51-4ad3-821e-77d985efdf72}",
+                "hidden": false,
+                "icon": "C:\\Data\\_DevTools\\msys64\\mingw64.ico",
+                "name": "MSYS2: mingw64",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // clang64 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -clang64 -shell bash",
+                "guid": "{ab3b31c7-d2e6-4a4b-b0c7-fcef36faa165}",
+                "hidden": true,
+                "icon": "C:\\Data\\_DevTools\\msys64\\clang64.ico",
+                "name": "MSYS2: clang64",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // clang32 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -clang32 -shell bash",
+                "guid": "{b3bf88c5-ad1d-4c3f-b32f-b743bb3f97bb}",
+                "hidden": true,
+                "icon": "C:\\Data\\_DevTools\\msys64\\clang32.ico",
+                "name": "MSYS2: clang32",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            // clangarm64 (MSYS2)
+            {
+                "commandline": "C:\\Data\\_DevTools\\msys64\\msys2_shell.cmd -defterm -here -no-start -clangarm64 -shell bash",
+                "guid": "{de5a28a7-0f35-4af7-87ee-fcb962278fc3}",
+                "hidden": true,
+                "icon": "C:\\Data\\_DevTools\\msys64\\clangarm64.ico",
+                "name": "MSYS2: clangarm64",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            }
+        ]
+    },
+    "schemes": [],
+    "themes": []
+}
