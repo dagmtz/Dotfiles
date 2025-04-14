@@ -36,10 +36,10 @@
 *.color7:       #a2a2a2
 *.color15:      #f9f9f9
 
-URxvt*font: xft:IosevkaTerm Nerd Font Mono:size=11:hinting=true
-URxvt*boldFont: xft:IosevkaTerm Nerd Font Mono:style=Bold:size=11
-URxvt*italicFont: xft:IosevkaTerm Nerd Font Mono:style=Italic:size=11
-URxvt*boldItalicfont: xft:IosevkaTerm Nerd Font Mono:style=Bold Italic:size=11
+URxvt*font: xft:Iosevka Nerd Font:size=11:hinting=true
+URxvt*boldFont: xft:Iosevka Nerd Font:style=Bold:size=11
+URxvt*italicFont: xft:Iosevka Nerd Font:style=Italic:size=11
+URxvt*boldItalicfont: xft:Iosevka Nerd Font:style=Bold Italic:size=11
 
 URxvt*tabbed.tabbar-fg: 6
 URxvt*tabbed.tabbar-bg: 0 
@@ -47,7 +47,7 @@ URxvt*tabbed.tab-fg: 15
 URxvt*tabbed.tab-bg: 0
 
 URxvt*lineSpace: 0
-URxvt*geometry: 180x40
+URxvt*geometry: 135x24
 URxvt*internalBorder: 24
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
@@ -61,6 +61,4 @@ URxvt*iso14755: false
 URxvt*depth: 32
 URxvt.background: [95]#202020
 
-URxvt.perl-ext-common: tabbed, close-gracefully
-
-
+URxvt.perl-ext-common: tabbed, close-gracefully, font-size

@@ -1,3 +1,10 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # Source the ~/.bashrc file if it exists
 if [ -f ~/.bash_aliases ]
 then
@@ -42,9 +49,41 @@ shopt -s cmdhist
 # History substitution are not immediately passed to the shell parser.
 shopt -s histappend histverify
 
-#bind 'set completion-ignore-case on'
 #bind 'set show-all-if-ambiguous on'
+bind 'set completion-ignore-case on'
 bind 'TAB:menu-complete'
 
-cd ~
-#export PS1="\[\033[1;32m\]\u \[\033[0;33m\]\w\[\033[36m\]`__git_ps1`\n\[\033[1;32m\]$>\[\033[0m\] "
+# Set prompt
+exitstatus()
+{
+    if [[ $? == 0 ]]; then
+        printf '\033[32m'
+    else 
+        printf '\033[31m'
+    fi
+}
+
+if [ -f ~/.config/git/git-prompt.sh ]; then
+  . ~/.config/git/git-prompt.sh
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  PS1='\[\033[30m\][\[\033[38;5;208m\]\u\[\033[0m\]\[\033[30m\]@\[\033[36m\]\h\[\033[30m\]]\[\033[30m\][\[\033[32m\]\W\[\033[30m\]]\[\033[30m\][\t]\[\033[36m\]$(__git_ps1 "(%s)")\n\[$(exitstatus)\]$> \[\033[0m\]'
+else 
+  PS1='\[\033[30m\][\[\033[38;5;208m\]\u\[\033[0m\]\[\033[30m\]@\[\033[36m\]\h\[\033[30m\]]\[\033[30m\][\[\033[32m\]\W\[\033[30m\]]\[\033[30m\][\t]\n\[$(exitstatus)\]$> \[\033[0m\]'
+fi
+
+# Start oh-my-posh prompt if feasible
+if [[ ! $(tty) =~ /dev/tty[1-8] ]]; then
+    #zsh
+    if [ -e ~/.local/bin/oh-my-posh ]; then
+      eval "$(oh-my-posh init bash --config '~/.config/omp/themes/dagmtz2.omp.json')"
+    fi
+else
+    neofetch
+
+fi
+
+if [[ -r /usr/share/bash-completion/bash_completion ]]; then
+  . /usr/share/bash-completion/bash_completion
+fi
+
+export PATH=$PATH:$HOME/.local/bin

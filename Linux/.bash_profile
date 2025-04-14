@@ -1,4 +1,7 @@
-# Source the ~/.bashrc file if it exists
+#
+# ~/.bash_profile
+#
+
 if [ -f ~/.bashrc ]
 then
     . ~/.bashrc
