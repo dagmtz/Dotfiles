@@ -1,35 +1,40 @@
-# Git aliases
-# alias gs='git status -sb'
-# alias gcc='git checkout'
-# alias gcm='git checkout master'
-# alias gaa='git add --all'
-# alias gc='git commit -m $2'
-# alias push='git push'
-# alias gpo='git push origin'
-# alias pull='git pull'
-# alias clone='git clone'
-# alias stash='git stash'
-# alias pop='git stash pop'
-alias gaa='git add .'
-alias gau='git add -u'
-alias gca='git commit -a'
-alias gb='git branch'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gm='git merge'
-alias gethash=''
+#
+# ~/.bash_aliases
+#
 
-# Bash aliases
-# alias .='cd .'
-# alias ..='cd ..'
-# alias ...='cd ../../'
-# alias ....='cd ../../../'
-# alias .....='cd ../../../../'
-# alias bashclear='echo "" > ~/.bash_history'
-# alias cls='clear'
-# alias ls='ls -F --color=auto --show-control-chars'
-alias ll='ls -l -F --color=auto --show-control-chars'
-alias la='ls -alx -F --color=auto --show-control-chars'
-# alias lls='ls -la --sort=size'
-# alias llt='ls -la --sort=time'
-# alias rm='rm -iv'
-# alias work='cd /c/repos'
+## Colorize the command output ##
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+## Use long listing format ##
+alias la='ls -al'
+
+## Show hidden files ##
+alias l.='ls -d .*'
+
+## get rid of command not found ##
+alias cd..='cd ..'
+ 
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+alias mkdir='mkdir -pv'
+
+alias vi=vim
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vim'
+
+alias reboot="sudo /sbin/reboot"
+alias poweroff="sudo /sbin/poweroff"
+alias halt="sudo /sbin/halt"
+alias shutdown="sudo /sbin/shutdown"
+alias flighton='sudo rfkill block all'
+alias flightoff='sudo rfkill unblock all'
+

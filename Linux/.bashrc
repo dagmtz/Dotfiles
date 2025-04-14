@@ -11,6 +11,9 @@ then
     . ~/.bash_aliases
 fi
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Bash shell settings
 # Typing a directory name just by itself will automatically change into that directory.
 shopt -s autocd
@@ -53,6 +56,8 @@ shopt -s histappend histverify
 bind 'set completion-ignore-case on'
 bind 'TAB:menu-complete'
 
+export PATH=$PATH:$HOME/.local/bin
+
 # Set prompt
 exitstatus()
 {
@@ -75,15 +80,13 @@ fi
 if [[ ! $(tty) =~ /dev/tty[1-8] ]]; then
     #zsh
     if [ -e ~/.local/bin/oh-my-posh ]; then
-      eval "$(oh-my-posh init bash --config '~/.config/omp/themes/dagmtz2.omp.json')"
+      eval "$(oh-my-posh init bash --config '~/.config/omp/themes/spaceship2.omp.json')"
     fi
 else
     neofetch
-
 fi
 
 if [[ -r /usr/share/bash-completion/bash_completion ]]; then
   . /usr/share/bash-completion/bash_completion
 fi
 
-export PATH=$PATH:$HOME/.local/bin
