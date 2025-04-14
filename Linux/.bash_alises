@@ -24,6 +24,9 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
+alias home='cd ~'
+alias root="cd /'
+
 alias mkdir='mkdir -pv'
 
 alias vi=vim
@@ -37,4 +40,3 @@ alias halt="sudo /sbin/halt"
 alias shutdown="sudo /sbin/shutdown"
 alias flighton='sudo rfkill block all'
 alias flightoff='sudo rfkill unblock all'
-
