@@ -55,6 +55,9 @@ URxvt*saveline: 2048
 URxvt*scrollBar: false
 URxvt*scrollstyle: plain
 URxvt*scrollBar_right: false
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
 URxvt*urgentOnBell: false 
 URxvt*visualBell: true
 URxvt*iso14755: false
@@ -62,3 +65,4 @@ URxvt*depth: 32
 URxvt.background: [95]#202020
 
 URxvt.perl-ext-common: tabbed, close-gracefully, font-size
+
