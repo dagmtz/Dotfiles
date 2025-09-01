@@ -1,0 +1,77 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "lightYellow",
+                    "style": "plain",
+                    "template": "{{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}",
+                    "type": "session"
+                },
+                {
+                    "foreground": "lightYellow",
+                    "properties": {
+                        "style": "agnoster_short"
+                    },
+                    "style": "plain",
+                    "template": " <darkGray>in</> {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "cyan",
+                    "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                    "properties": {
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "untracked_modes": {
+                            "/Users/user/Projects/oh-my-posh/": "no"
+                        },
+                        "source": "cli"
+                    }
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                "type": "time",
+                "style": "plain",
+                "foreground": "darkGray",
+                "template": "{{ .CurrentDate | date .Format }}",
+                "properties": {
+                    "time_format": "Jan 2 - 15:04:05"
+                    }
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#00ff00",
+                    "style": "plain",
+                    "template": "{{ if .Root }}# {{else}}$ {{ end }}",
+                    "type": "session"
+                },
+                {
+                "type": "text",
+                "style": "plain",
+                "foreground": "lightWhite",
+                "template": "{{if gt .Code 0}}<#ff0000>({{.Code}}) \u276f\u276f</> {{else}}<#00ff00>\u276f\u276f</>{{end}}"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 3
+}
